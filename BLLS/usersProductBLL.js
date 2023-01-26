@@ -113,7 +113,6 @@ const singIn = () => async (req, res) => {
   
       try {
           const exsist = await Users.findOne({ email });
-          console.log(exsist)
           if (!exsist) return res.status(404).json("user not exsist");
   
           const currect = password === exsist.password;
@@ -142,7 +141,6 @@ const facebooklogin = () => async(req, res) => {
 
         return res.json( user );
     } else {
-        console.log(newUser);
         const newUserd = await Users.create({...newUser , access:'user'});
         const token = jwt.sign({ _id: newUser._id }, "test", {
             expiresIn: "1d",
@@ -178,7 +176,6 @@ const forgotPassword = () => async (req,res) =>{
     const {email} = req.body
 
     const exsist = await Users.findOne({ email });
-      console.log(exsist);
     if (!exsist) return res.status(404).json("user is not exsist");
 
     else{
