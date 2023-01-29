@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Bll = require("../BLLS/orderBll");
 
-// http://localhost:8000/order
+// https://e-commerce-server-019n.onrender.com/order
 
 router.get("/order", Bll.getAllOrder);
 router.get("/order/:id", Bll.getOrder);
