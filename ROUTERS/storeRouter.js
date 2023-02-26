@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Bll = require("../BLLS/storeBLL");
 
-// http://localhost:8000/store
+// https://e-commerce-server-019n.onrender.com/store
 
 router.get("/store", Bll.getAllStores);
 router.get("/store/:id", Bll.getStore);

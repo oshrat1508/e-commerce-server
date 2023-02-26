@@ -1,7 +1,7 @@
 const express = require("express");
 const BLL = require("../BLLS/usersProductBLL");
 const router = express.Router();
-// http://localhost:8000/singup
+// https://e-commerce-server-019n.onrender.com/singup
 
 router.post("/singup", BLL.singUp());
 router.post("/singupManeger", BLL.singUpManager());
