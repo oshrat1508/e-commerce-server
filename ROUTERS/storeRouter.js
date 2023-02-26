@@ -2,8 +2,6 @@ const express = require("express");
 const router = express.Router();
 const Bll = require("../BLLS/storeBLL");
 
-// https://e-commerce-server-019n.onrender.com/store
-
 router.get("/store", Bll.getAllStores);
 router.get("/store/:id", Bll.getStore);
 router.post("/store", Bll.createStore);
